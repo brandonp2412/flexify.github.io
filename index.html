@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexify - Your Ultimate Fitness Companion</title>
+    <style>
+      :root {
+        --primary: #d3bcfd;
+        --secondary: #9d7fe3;
+        --dark: #1a1a1a;
+        --light: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", -apple-system, sans-serif;
+      }
+
+      body {
+        background: var(--dark);
+        color: var(--light);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: var(--primary);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Styles */
+      header {
+        padding: 2rem 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .hero-text h1 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-text p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #cccccc;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 8rem 0;
+      }
+
+      .features-grid {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+      }
+
+      .feature-card > h3,
+      .feature-card > p {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+
+      .feature-card > p {
+        padding-bottom: 1em;
+      }
+
+      .feature-card {
+        width: 270px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.1)
+        );
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .feature-card:hover::before {
+        transform: translateX(100%);
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+
+      /* Animations */
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary),
+            0 0 30px var(--primary);
+        }
+        to {
+          text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary),
+            0 0 40px var(--secondary);
+        }
+      }
+
+      .app-screenshot {
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(211, 188, 253, 0.3);
+        height: 76vh;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      /* Button Styles */
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: var(--dark);
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(211, 188, 253, 0.2);
+      }
+
+      .get-it {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">Flexify</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Transform Your Fitness Journey</h1>
+            <p>
+              Track workouts, set goals, and achieve results with the most
+              intuitive fitness app designed for you.
+            </p>
+
+            <div class="get-it">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.presley.flexify"
+                ><img
+                  alt="Get it on Google Play"
+                  height="100"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              /></a>
+              <a href="https://f-droid.org/packages/com.presley.flexify"
+                ><img
+                  src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+                  alt="Get it on F-Droid"
+                  height="100"
+              /></a>
+              <a
+                href="https://apps.apple.com/us/app/flexify/id6503730178?itsct=apps_box_badge&amp;itscg=30200"
+                style="margin-bottom: 10px"
+                ><img
+                  src="./download-apple.svg"
+                  alt="Download on the App Store"
+                  height="100"
+              /></a>
+              <a
+                href="https://apps.microsoft.com/detail/Flexify/9P13THVK7F69?mode=direct"
+                ><img
+                  src="https://get.microsoft.com/images/en-us%20dark.svg"
+                  height="100"
+              /></a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img
+              src="./1_en-US.png"
+              alt="Flexify App Dashboard"
+              class="app-screenshot"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem">
+          Powerful Features
+        </h2>
+        <p style="text-align: center; color: #cccccc; margin-bottom: 3rem">
+          Everything you need to reach your fitness goals
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <img
+              src="./2_en-US.png"
+              alt="Workout Tracking"
+              height="600px"
+              style="margin-top: -16px"
+            />
+            <h3>SPEED</h3>
+            <p>
+              Our app is fast! Everything is stored locally with SQLite. If
+              anything feels sluggish, make a
+              <a href="https://github.com/brandonp2412/Flexify/issues"
+                >GitHub issue</a
+              >
+              and we'll speed it up lickety split!
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="./5_en-US.png"
+              alt="Progress Analytics"
+              height="600px"
+              style="margin-top: -16px"
+            />
+            <h3>Advanced Analytics</h3>
+            <p>
+              Scope in on your weak-points with our beautiful line graphs.
+              Automatically convert units to seamlessly transition between
+              Freedom Tracking (™️) and Actual Units.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="./4_en-US.png"
+              alt="Custom Plans"
+              height="600px"
+              style="margin-top: -16px"
+            />
+            <h3>Personalized Plans</h3>
+            <p>
+              Set out your plans by day - or label them however you like. We
+              ship with a default PPL split, but hey, it's up to you!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
