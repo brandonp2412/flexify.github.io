@@ -141,36 +141,10 @@
     }
 
     /* Animations */
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary),
-          0 0 30px var(--primary);
-      }
-
-      to {
-        text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary),
-          0 0 40px var(--secondary);
-      }
-    }
-
     .app-screenshot {
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(211, 188, 253, 0.3);
       height: 76vh;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-20px);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
     }
 
     /* Button Styles */
@@ -316,6 +290,27 @@
           <p>After entering an exercise, a timer fires off in the background. Control it manually from the timers page.
           </p>
         </div>
+
+        <div class="feature-card">
+          <video src="./customize.mp4" height="600px" controls></video>
+          <h3 class="video-title">Customization</h3>
+          <p>
+            Everything is configurable! Customize to your hearts content.
+            From any of the list views, tap the menu (right of the search bar)
+            then access the settings. On the timers page it's the cog in the top right.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <video src="./customize2.mp4" height="600px" controls></video>
+          <h3 class="video-title">Insanely custom!</h3>
+          <p>
+            You can even remove entire tabs from the app. From the settings page
+            tap on the tabs item. Toggle tabs on/off and use the drag handles
+            to order them as you wish.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
