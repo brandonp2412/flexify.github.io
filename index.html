@@ -168,6 +168,56 @@
       display: flex;
       flex-wrap: wrap;
     }
+
+    .get-it a,
+    .get-it img {
+      max-width: 100%;
+    }
+
+    .get-it img {
+      height: auto;
+      max-height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem 0;
+      }
+
+      .hero {
+        margin-top: 0;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+      }
+
+      .hero-image {
+        display: flex;
+        justify-content: center;
+      }
+
+      .app-screenshot {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 76vh;
+      }
+
+      .features {
+        padding: 4rem 0;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+      }
+    }
   </style>
 </head>
 
@@ -197,7 +247,7 @@
               style="margin-bottom: 10px"><img src="./download-apple.svg" alt="Download on the App Store"
                 height="100" /></a>
             <a href="https://apps.microsoft.com/detail/Flexify/9P13THVK7F69?mode=direct"><img
-                src="./download-msstore.svg" height="100" /></a>
+                src="./download-msstore.svg" alt="Get it from Microsoft" height="100" /></a>
           </div>
         </div>
 
